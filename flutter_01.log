@@ -1,0 +1,109 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+NoSuchMethodError: NoSuchMethodError: The getter 'lastCompiled' was called on null.
+Receiver: null
+Tried calling: lastCompiled
+
+```
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:51:5)
+#1      HotRunner._updateDevFS (package:flutter_tools/src/run_hot.dart:387:45)
+#2      HotRunner._restartFromSources (package:flutter_tools/src/run_hot.dart:494:47)
+#3      HotRunner._fullRestartHelper.<anonymous closure> (package:flutter_tools/src/run_hot.dart:727:39)
+#4      asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:111:32)
+#5      _rootRun (dart:async/zone.dart:1190:13)
+#6      _CustomZone.run (dart:async/zone.dart:1093:19)
+#7      _runZoned (dart:async/zone.dart:1630:10)
+#8      runZonedGuarded (dart:async/zone.dart:1618:12)
+#9      runZoned (dart:async/zone.dart:1547:12)
+#10     asyncGuard (package:flutter_tools/src/base/async_guard.dart:109:3)
+#11     HotRunner._fullRestartHelper (package:flutter_tools/src/run_hot.dart:727:22)
+<asynchronous suspension>
+#12     HotRunner.restart (package:flutter_tools/src/run_hot.dart:669:44)
+<asynchronous suspension>
+#13     TerminalHandler._commonTerminalInputHandler (package:flutter_tools/src/resident_runner.dart:1578:61)
+#14     TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1643:13)
+#15     _rootRunUnary (dart:async/zone.dart:1198:47)
+#16     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#17     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1005:7)
+#18     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:357:11)
+#19     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:285:7)
+#20     _SyncBroadcastStreamController._sendData (dart:async/broadcast_stream_controller.dart:385:25)
+#21     _BroadcastStreamController.add (dart:async/broadcast_stream_controller.dart:250:5)
+#22     _AsBroadcastStreamController.add (dart:async/broadcast_stream_controller.dart:484:11)
+#23     _rootRunUnary (dart:async/zone.dart:1198:47)
+#24     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#25     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1005:7)
+#26     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:357:11)
+#27     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:285:7)
+#28     _SinkTransformerStreamSubscription._add (dart:async/stream_transformers.dart:69:11)
+#29     _EventSinkWrapper.add (dart:async/stream_transformers.dart:15:11)
+#30     _StringAdapterSink.add (dart:convert/string_conversion.dart:238:11)
+#31     _StringAdapterSink.addSlice (dart:convert/string_conversion.dart:243:7)
+#32     _Utf8ConversionSink.addSlice (dart:convert/string_conversion.dart:317:20)
+#33     _ErrorHandlingAsciiDecoderSink.addSlice (dart:convert/ascii.dart:256:17)
+#34     _ErrorHandlingAsciiDecoderSink.add (dart:convert/ascii.dart:242:5)
+#35     _ConverterStreamEventSink.add (dart:convert/chunked_conversion.dart:72:18)
+#36     _SinkTransformerStreamSubscription._handleData (dart:async/stream_transformers.dart:121:24)
+#37     _rootRunUnary (dart:async/zone.dart:1198:47)
+#38     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#39     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1005:7)
+#40     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:357:11)
+#41     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:285:7)
+#42     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:808:19)
+#43     _StreamController._add (dart:async/stream_controller.dart:682:7)
+#44     _StreamController.add (dart:async/stream_controller.dart:624:5)
+#45     _Socket._onData (dart:io-patch/socket_patch.dart:2044:41)
+#46     _rootRunUnary (dart:async/zone.dart:1206:13)
+#47     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#48     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1005:7)
+#49     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:357:11)
+#50     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:285:7)
+#51     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:808:19)
+#52     _StreamController._add (dart:async/stream_controller.dart:682:7)
+#53     _StreamController.add (dart:async/stream_controller.dart:624:5)
+#54     new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:1580:33)
+#55     _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:1076:14)
+#56     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#57     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#58     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#59     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 1.22.4, on Linux, locale en_GB.UTF-8)
+    • Flutter version 1.22.4 at /home/nitish/snap/flutter/common/flutter
+    • Framework revision 1aafb3a8b9 (4 weeks ago), 2020-11-13 09:59:28 -0800
+    • Engine revision 2c956a31c0
+    • Dart version 2.10.4
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.2)
+    • Android SDK at /home/nitish/Android/Sdk
+    • Platform android-30, build-tools 30.0.2
+    • Java binary at: /home/nitish/android-studio/jre/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
+    • All Android licenses accepted.
+
+[!] Android Studio
+    • Android Studio at /home/nitish/android-studio
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
+
+[✓] VS Code (version 1.49.2)
+    • VS Code at /usr/share/code
+    • Flutter extension version 3.16.0
+
+[✓] Connected device (1 available)
+    • CPH1701 (mobile) • 8f95c4d3 • android-arm64 • Android 6.0.1 (API 23)
+
+! Doctor found issues in 1 category.
+```
